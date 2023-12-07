@@ -37,7 +37,7 @@ public class arrowDistnace : MonoBehaviour
             
             if (distanceText != null)
             {
-                distanceText.text = $"Distancia: {distance.ToString("F2")} unidades";
+                distanceText.text = $"Distancia: {distance.ToString("F2")} Metros";
             }
             
         }
