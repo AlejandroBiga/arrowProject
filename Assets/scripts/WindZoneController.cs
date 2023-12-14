@@ -7,22 +7,21 @@ using UnityEngine.UIElements;
 
 public class WindZoneController : MonoBehaviour
 {
-    public WindZone[] windZones;
-    public UnityEngine.UI.Button[] botones;
-
+    public GameObject[] windZones;
+    public UnityEngine.UI.Toggle[] toggles;
 
     void Start()
     {
-        for (int i = 0; i < Mathf.Min(windZones.Length, botones.Length); i++)
+        for (int i = 0; i < Mathf.Min(windZones.Length, toggles.Length); i++)
         {
-            int index = i; 
-            botones[i].onClick.AddListener(() => ActivarDesactivarWindZone(windZones[index]));
+            int index = i;
+            toggles[i].onValueChanged.AddListener((value) => ToggleWindZone(index, value));
         }
     }
 
-    public void ActivarDesactivarWindZone(WindZone windZone)
+    void ToggleWindZone(int index, bool isActive)
     {
-        windZone.enabled = !windZone.enabled;
-
+        windZones[index].SetActive(isActive);
+        
     }
 }
