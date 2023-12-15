@@ -15,7 +15,7 @@ public class BowShooting : MonoBehaviour
     public void Update()
     {
         ArrowForce = ForceSlider.value;
-        ForceText.text = "" + ForceSlider.value;
+        ForceText.text = "Force: " + ForceSlider.value;
     }
 
     public void ShootArrow()
