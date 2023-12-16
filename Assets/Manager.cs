@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour
 {
@@ -41,5 +43,9 @@ public class Manager : MonoBehaviour
         cam2.SetActive(false);
         cam3.SetActive(false);
         cam4.SetActive(true);
+    }
+    public void RestartScene()
+    {
+        SceneManager.LoadScene("Arco");
     }
 }

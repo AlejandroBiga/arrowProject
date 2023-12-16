@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Arco.unity
+    guid: 39434f44eb81d5e4c9483509d3cfb5b7
   m_configObjects: {}

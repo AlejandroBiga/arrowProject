@@ -16,9 +16,6 @@ public class ObjetiveSlider : MonoBehaviour
     private void Start()
     {
         initialZPosition = movableObject.transform.position.z;
-        ShootButton.SetActive(false);
-        BowPanel.SetActive(false);
-
     }
     public void ApplyObjectPos()
     {  
