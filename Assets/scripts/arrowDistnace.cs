@@ -33,12 +33,16 @@ public class arrowDistnace : MonoBehaviour
             
             Debug.Log($"Distancia entre {gameObject.name} y {target.name}: {distance}");
 
-            
-            if (distanceText != null)
+
+            if (distance <= 1.45)
+            {
+                distanceText.text = "En el blanco";
+            }
+            else
             {
                 distanceText.text = $"Distancia: {distance.ToString("F2")} Metros";
             }
-            
+
         }
     }
 }
