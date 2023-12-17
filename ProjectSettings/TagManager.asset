@@ -8,6 +8,9 @@ TagManager:
   - Target
   - camarrow
   - wind
+  - textPluma
+  - textOro
+  - textCobre
   layers:
   - Default
   - TransparentFX

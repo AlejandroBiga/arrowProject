@@ -4,23 +4,29 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class arrowDistnace : MonoBehaviour
+public class arrowDistnace2 : MonoBehaviour
 {
-    public string targetTag = "Target"; 
+    public string targetTag = "Target";
+    public string textTag = "textCobre";
     private Transform target;
-    public TextMeshProUGUI distanceText;
-    public TextMeshProUGUI windDirectionText;
-    public WIndZoneScript windZoneScript;
+    private TextMeshProUGUI distanceText;
+    
 
     private void Start()
     {
-        
         GameObject targetObject = GameObject.FindGameObjectWithTag(targetTag);
 
         if (targetObject != null)
         {
             
             target = targetObject.transform;
+        }
+
+        GameObject textObject = GameObject.FindGameObjectWithTag(textTag);
+
+        if (textObject != null)
+        {
+            distanceText = textObject.GetComponent<TextMeshProUGUI>();
         }
         
     }
@@ -48,16 +54,5 @@ public class arrowDistnace : MonoBehaviour
             
         }
     }
-
-    private void UpdateWindDirection(Vector3 newWindDirection)
-    {
-        
-        windDirectionText.text = $"Viento: ({newWindDirection.x}, {newWindDirection.y}, {newWindDirection.z})";
-        float xSliderValue = windZoneScript.XInput.value;
-        float ySliderValue = windZoneScript.YInput.value;
-        float zSliderValue = windZoneScript.ZInput.value;
-        Debug.Log($"Valores de los sliders desde arrowDistnace: X={xSliderValue}, Y={ySliderValue}, Z={zSliderValue}");
-    }
-
 
 }
