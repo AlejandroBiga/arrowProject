@@ -10,7 +10,6 @@ public class ObjetiveSlider : MonoBehaviour
     public float maxDistance = 10f; 
     private float initialZPosition;
     public GameObject ObjPanel;
-    public GameObject ShootButton;
     public GameObject BowPanel;
 
     private void Start()
@@ -30,7 +29,6 @@ public class ObjetiveSlider : MonoBehaviour
     public void StartSim()
     {
         ObjPanel.SetActive(false);
-        ShootButton.SetActive(true);
         BowPanel.SetActive(true);
     }
 }

@@ -17,7 +17,11 @@ public class BowShooting : MonoBehaviour
     public TextMeshProUGUI ForceText;
     public float torque;
 
-    
+    public Button ShootingCobre;
+    public Button ShootingOro;
+    public Button ShootingPluma;
+
+
     public void Update()
     {
         ArrowForce = ForceSlider.value;
@@ -30,8 +34,6 @@ public class BowShooting : MonoBehaviour
         Rigidbody ArrowRB = ArrowClone.GetComponent<Rigidbody>();
         ArrowRB.AddRelativeForce(Vector3.up * ArrowForce, ForceMode.Impulse);
         ArrowRB.AddTorque(transform.right * torque);
-
-        
     }
 
     public void ShootCobreArrow()
@@ -39,20 +41,24 @@ public class BowShooting : MonoBehaviour
         GameObject ArrowClone = Instantiate(CobreArrow, ArrowSpawner.position, ArrowSpawner.rotation);
         Rigidbody ArrowRB = ArrowClone.GetComponent<Rigidbody>();
         ArrowRB.AddRelativeForce(Vector3.up * ArrowForce, ForceMode.Impulse);
-        StartCoroutine(DeactivateObject(ArrowClone));
+        ArrowRB.AddTorque(transform.right * torque);
+        ShootingCobre.enabled = false;
     }
     public void ShootOroArrow()
     {
         GameObject ArrowClone = Instantiate(OroArrow, ArrowSpawner.position, ArrowSpawner.rotation);
         Rigidbody ArrowRB = ArrowClone.GetComponent<Rigidbody>();
         ArrowRB.AddRelativeForce(Vector3.up * ArrowForce, ForceMode.Impulse);
-        StartCoroutine(DeactivateObject(ArrowClone));
+        ArrowRB.AddTorque(transform.right * torque);
+        ShootingOro.enabled = false;
+
     }
     public void ShootPlumaArrow()
     {
         GameObject ArrowClone = Instantiate(PlumaArrow, ArrowSpawner.position, ArrowSpawner.rotation);
         Rigidbody ArrowRB = ArrowClone.GetComponent<Rigidbody>();
         ArrowRB.AddRelativeForce(Vector3.up * ArrowForce, ForceMode.Impulse);
-        StartCoroutine(DeactivateObject(ArrowClone));
+        ArrowRB.AddTorque(transform.right * torque);
+        ShootingPluma.enabled = false;
     }
 }
