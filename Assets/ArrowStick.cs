@@ -5,17 +5,17 @@ using UnityEngine;
 public class ArrowStick : MonoBehaviour
 {
     public Rigidbody rb;
+    public Collider collider1;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        collider1 = GetComponent<Collider>();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Target")
-        {
-            rb.isKinematic = true;
-        }
+        rb.isKinematic = true;
+        collider1.enabled = false;
     }
 }
