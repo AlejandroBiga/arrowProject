@@ -9,6 +9,9 @@ public class BowShooting : MonoBehaviour
     public float ArrowForce;
     public float objectLifetime = 3;
     public GameObject Arrow;
+    public GameObject CobreArrow;
+    public GameObject OroArrow;
+    public GameObject PlumaArrow;
     public Transform ArrowSpawner;
     public Slider ForceSlider;
     public TextMeshProUGUI ForceText;
@@ -30,5 +33,27 @@ public class BowShooting : MonoBehaviour
     {
         yield return new WaitForSeconds(objectLifetime);
         Destroy(objToDeactivate);
+    }
+
+    public void ShootCobreArrow()
+    {
+        GameObject ArrowClone = Instantiate(CobreArrow, ArrowSpawner.position, ArrowSpawner.rotation);
+        Rigidbody ArrowRB = ArrowClone.GetComponent<Rigidbody>();
+        ArrowRB.AddRelativeForce(Vector3.up * ArrowForce, ForceMode.Impulse);
+        StartCoroutine(DeactivateObject(ArrowClone));
+    }
+    public void ShootOroArrow()
+    {
+        GameObject ArrowClone = Instantiate(OroArrow, ArrowSpawner.position, ArrowSpawner.rotation);
+        Rigidbody ArrowRB = ArrowClone.GetComponent<Rigidbody>();
+        ArrowRB.AddRelativeForce(Vector3.up * ArrowForce, ForceMode.Impulse);
+        StartCoroutine(DeactivateObject(ArrowClone));
+    }
+    public void ShootPlumaArrow()
+    {
+        GameObject ArrowClone = Instantiate(PlumaArrow, ArrowSpawner.position, ArrowSpawner.rotation);
+        Rigidbody ArrowRB = ArrowClone.GetComponent<Rigidbody>();
+        ArrowRB.AddRelativeForce(Vector3.up * ArrowForce, ForceMode.Impulse);
+        StartCoroutine(DeactivateObject(ArrowClone));
     }
 }
