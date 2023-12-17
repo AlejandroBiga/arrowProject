@@ -16,6 +16,8 @@ public class BowShooting : MonoBehaviour
     public Slider ForceSlider;
     public TextMeshProUGUI ForceText;
     public float torque;
+
+    
     public void Update()
     {
         ArrowForce = ForceSlider.value;
@@ -28,6 +30,8 @@ public class BowShooting : MonoBehaviour
         Rigidbody ArrowRB = ArrowClone.GetComponent<Rigidbody>();
         ArrowRB.AddRelativeForce(Vector3.up * ArrowForce, ForceMode.Impulse);
         ArrowRB.AddTorque(transform.right * torque);
+
+        
     }
 
     public void ShootCobreArrow()

@@ -17,7 +17,7 @@ public class WIndZoneScript : MonoBehaviour
     public TextMeshProUGUI Ytext;
     public TextMeshProUGUI Ztext;
 
-
+    
     private void Start()
     {
         ObjPanel.SetActive(false);
@@ -55,6 +55,7 @@ public class WIndZoneScript : MonoBehaviour
         Xtext.text = "" + XInput.value;
         Ytext.text = "" + YInput.value;
         Ztext.text = "" + ZInput.value;
+
     }
 
     public void ApplyWindZoneInput()

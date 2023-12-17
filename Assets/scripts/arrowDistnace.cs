@@ -9,6 +9,8 @@ public class arrowDistnace : MonoBehaviour
     public string targetTag = "Target"; 
     private Transform target;
     public TextMeshProUGUI distanceText;
+    public TextMeshProUGUI windDirectionText;
+    public WIndZoneScript windZoneScript;
 
     private void Start()
     {
@@ -33,12 +35,29 @@ public class arrowDistnace : MonoBehaviour
             
             Debug.Log($"Distancia entre {gameObject.name} y {target.name}: {distance}");
 
-            
-            if (distanceText != null)
+
+            if (distance <= 1.45)
+            {
+                distanceText.text = "En el blanco";
+            }
+            else
             {
                 distanceText.text = $"Distancia: {distance.ToString("F2")} Metros";
             }
+
             
         }
     }
+
+    private void UpdateWindDirection(Vector3 newWindDirection)
+    {
+        
+        windDirectionText.text = $"Viento: ({newWindDirection.x}, {newWindDirection.y}, {newWindDirection.z})";
+        float xSliderValue = windZoneScript.XInput.value;
+        float ySliderValue = windZoneScript.YInput.value;
+        float zSliderValue = windZoneScript.ZInput.value;
+        Debug.Log($"Valores de los sliders desde arrowDistnace: X={xSliderValue}, Y={ySliderValue}, Z={zSliderValue}");
+    }
+
+
 }
