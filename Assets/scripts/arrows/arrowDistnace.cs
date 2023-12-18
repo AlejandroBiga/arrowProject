@@ -7,10 +7,9 @@ using UnityEngine.UI;
 public class arrowDistnace : MonoBehaviour
 {
     public string targetTag = "Target";
-    public string textTag = "textPluma";
+    public string textObjectName = "pluma";  // Cambia "YourTextObjectName" al nombre real de tu objeto de texto
     private Transform target;
     private TextMeshProUGUI distanceText;
-    
 
     private void Start()
     {
@@ -18,40 +17,33 @@ public class arrowDistnace : MonoBehaviour
 
         if (targetObject != null)
         {
-            
             target = targetObject.transform;
         }
 
-        GameObject textObject = GameObject.FindGameObjectWithTag(textTag);
+        GameObject textObject = GameObject.Find(textObjectName);
 
         if (textObject != null)
         {
             distanceText = textObject.GetComponent<TextMeshProUGUI>();
         }
-        
     }
 
     private void Update()
     {
-        if (target != null)
+        if (target != null && distanceText != null)
         {
-            
             float distance = Vector3.Distance(transform.position, target.position);
 
-            
             Debug.Log($"Distancia entre {gameObject.name} y {target.name}: {distance}");
 
-
-            if (distance <= 1.45)
+            if (distance <= 2.56f)
             {
                 distanceText.text = "En el blanco";
             }
             else
             {
-                distanceText.text = $"Distancia: {distance.ToString("F2")} Metros";
+                distanceText.text = $"Distancia: {distance.ToString("F2")} unitys";
             }
-
-            
         }
     }
 
