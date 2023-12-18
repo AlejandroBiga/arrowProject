@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2245434007894259302}
   - component: {fileID: 1555991561899510333}
   - component: {fileID: 5954145748456582636}
-  - component: {fileID: -2629921495359042020}
   m_Layer: 0
   m_Name: Arrow_01 2
   m_TagString: arrow
@@ -150,20 +149,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 2245434007894259302}
   collider1: {fileID: 1555991561899510333}
---- !u!114 &-2629921495359042020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1637704600582561190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbdb0ef5916c87f44b52cdf650be76a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: Target
-  textTag: textOro
 --- !u!1 &3812692574030830095
 GameObject:
   m_ObjectHideFlags: 0

@@ -3513,7 +3513,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &704418832
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3755,6 +3755,7 @@ GameObject:
   - component: {fileID: 712805284}
   - component: {fileID: 712805286}
   - component: {fileID: 712805285}
+  - component: {fileID: 712805287}
   m_Layer: 0
   m_Name: GM
   m_TagString: Untagged
@@ -3881,6 +3882,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelResultados: {fileID: 837427960}
+--- !u!114 &712805287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712805279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e058a99c0efee43b7dc78d9d667552, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flecha1: {fileID: 1637704600582561190, guid: 987ac6a54fc788249b166f29ed79e7e3, type: 3}
+  flecha2: {fileID: 1637704600582561190, guid: 5afb9eaa21188d24597b469f6fd91d45, type: 3}
+  flecha3: {fileID: 1637704600582561190, guid: ca2e3684a81332c4a86ca5629b26fba4, type: 3}
+  objetivo: {fileID: 2060842177}
+  distanciaTexto1: {fileID: 1335047415}
+  distanciaTexto2: {fileID: 396666599}
+  distanciaTexto3: {fileID: 491187051}
 --- !u!1 &745371678
 GameObject:
   m_ObjectHideFlags: 0
