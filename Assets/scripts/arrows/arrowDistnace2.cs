@@ -36,7 +36,7 @@ public class arrowDistnace2 : MonoBehaviour
 
             Debug.Log($"Distancia entre {gameObject.name} y {target.name}: {distance}");
 
-            if (distance <= 2.56f)
+            if (distance <= 4f)
             {
                 distanceText.text = "En el blanco";
             }
