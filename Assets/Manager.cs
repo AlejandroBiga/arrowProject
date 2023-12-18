@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -49,3 +50,4 @@ public class Manager : MonoBehaviour
         SceneManager.LoadScene("Arco1");
     }
 }
+#endif
