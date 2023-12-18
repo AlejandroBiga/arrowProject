@@ -18,7 +18,7 @@ public class BowScript : MonoBehaviour
         float BowRotation = BaseSlider.value;
         Bow.rotation = Quaternion.Euler(BowRotate, BowRotation, 0f);
 
-        xText.text = "X: " + BowSlider.value;
-        yText.text = "Y: " + BaseSlider.value;
+        xText.text = "Y: " + BowSlider.value;
+        yText.text = "X: " + BaseSlider.value;
     }
 }
