@@ -47,7 +47,7 @@ public class Manager : MonoBehaviour
     }
     public void RestartScene()
     {
-        SceneManager.LoadScene("Arco1");
+        SceneManager.LoadScene("0");
     }
 }
 #endif
